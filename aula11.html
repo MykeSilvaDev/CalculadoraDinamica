@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Calculadora Dinâmica </h1>
+
+    <script>
+        var numeroInicial = prompt('Informe o primeiro número')
+        var sinal = prompt("Informe o sinal da sua operação")
+// VOU VERIFICAR SE O NÚMERO QUE O USUÁRIO PASSOU É VÁLIDO
+        while(sinal != '-' && sinal !='+' && sinal != '/' && sinal != '*'){
+            alert('Informe um sinal válido!');
+            sinal = prompt('Informe o sinal da sua operação...')
+        }
+
+        var numeroFinal = prompt("Informe o número final")
+
+        // PARSEINT CONVERTE STRING PARA NUMERO 
+        numeroInicial = parseInt(numeroInicial);
+        numeroFinal = parseInt(numeroFinal);
+        
+        var resultadoFinal = 0;
+        if(sinal == '+'){
+            resultadoFinal = numeroInicial + numeroFinal
+        }else if(sinal == '-'){
+            resultadoFinal = numeroInicial - numeroFinal
+        }else if(sinal == '/'){
+            resultadoFinal = numeroInicial / numeroFinal
+        }else if(sinal == '*'){
+            resultadoFinal = numeroInicial * numeroFinal
+        }
+        
+        alert('O resultado final é: '+ resultadoFinal);
+    
+    </script>
+
+</body>
+</html>
